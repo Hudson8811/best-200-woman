@@ -1,5 +1,20 @@
 body {
 	background-color: #09151F;
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #08151F;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #F70042;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #F2B604;
+	}
 }
 .wrapper {
 	display: flex;

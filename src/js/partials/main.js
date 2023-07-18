@@ -166,7 +166,11 @@ $(document).ready(function() {
                             src: "#modal",
                             type: "inline",
                         },
-                    ]);
+                    ],
+                        {
+                            dragToClose : false,
+                            closeButton: false
+                        });
                     setTimeout(function (){
                         $('.modal__slider').slick('refresh');
                     },100)
@@ -218,7 +222,10 @@ $(document).ready(function() {
                                 src: "#alert",
                                 type: "inline",
                             },
-                        ]);
+                        ],
+                            {
+                                closeButton: false
+                            });
                     } else {
                         form[0].reset();
                         $('.alert__title').text('Успешно').removeClass('error');
@@ -228,7 +235,10 @@ $(document).ready(function() {
                                 src: "#alert",
                                 type: "inline",
                             },
-                        ]);
+                        ],
+                            {
+                                closeButton: false
+                            });
                     }
                 } catch(e) {
                     alert('Ошибка обработки ответа от сервера');

@@ -4,7 +4,6 @@
 	background: #09151F;
 	box-sizing: border-box;
 	position: relative;
-	overflow: hidden;
 	display: none;
 	padding: 0;
 	@media (max-width: 1300px){
@@ -230,7 +229,7 @@
 		line-height: normal;
 		text-transform: uppercase;
 		@media (max-width: 1300px){
-			font-size: vw(38, 1300);
+			font-size: vw(30, 1300);
 		}
 		@media (max-width: 800px){
 			font-size: vw2(38);
@@ -266,7 +265,7 @@
 		align-items: center;
 		padding: 0 78px 60px;
 		@media (max-width: 1300px){
-			padding: vw(78, 1300) vw(60, 1300);
+			padding: 0 vw(78, 1300) vw(60, 1300);
 		}
 		@media (max-width: 800px){
 			padding: 0 vw2(78) vw2(60);
@@ -427,5 +426,23 @@
 				margin-left: vw2(44);
 			}
 		}
+	}
+}
+
+.fancybox__slide{
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #08151F;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #F70042;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #F2B604;
 	}
 }
