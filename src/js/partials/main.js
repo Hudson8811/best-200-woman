@@ -140,7 +140,6 @@ $(document).ready(function() {
                 event.preventDefault();
                 let id = parseInt($(this).data('id'));
                 if (galleryData.hasOwnProperty(id)) {
-                    console.log(galleryData[id]);
                     let name = galleryData[id].name;
                     let studio = galleryData[id].studio;
                     let desc = galleryData[id].desc ;
