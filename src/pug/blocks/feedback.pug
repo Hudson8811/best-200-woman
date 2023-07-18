@@ -1,22 +1,28 @@
-section.feedback
+section.feedback#participate
 	.feedback__title 
 		span УЧАВСТВОВАТЬ
 			img(src="images/feedback/square-top-left.png", alt="alt").feedback__square-top-left
 	.feedback__container 
 		img(src="images/feedback/square-top-right.png", alt="alt").feedback__square-top-right
 		img(src="images/feedback/square-bottom-left.png", alt="alt").feedback__square-bottom-left
-		form.feedback__form(action="") 
+		form.feedback__form(action="/" method="post")
 			.feedback__fields
 				.feedback__field 
-					input(type="text" placeholder="Имя*").feedback__input
+					input(type="text" placeholder="Имя*" name="name" required).feedback__input
 				.feedback__field 
-					input(type="email" placeholder="Email*").feedback__input
+					input(type="email" placeholder="Email*" name="email" required).feedback__input
 				.feedback__field 
-					input(type="text" placeholder="Дизайн-студия").feedback__input
+					input(type="text" placeholder="Дизайн-студия" name="studio").feedback__input
 				.feedback__field 
-					input(type="text" placeholder="Город*").feedback__input
+					input(type="text" placeholder="Город*" name="city" required).feedback__input
 				.feedback__field 
-					input(type="text" placeholder="Ссылка на фото*").feedback__input
+					input(type="text" placeholder="Ссылка на фото*" name="link" required).feedback__input
 				.feedback__field 
-					input(type="text" placeholder="Описание работы*").feedback__input
+					input(type="text" placeholder="Описание работы*" name="desc" required).feedback__input
 			button(type='submit').feedback__btn подать заявку
+
+.alert#alert
+	.alert__close
+	.alert__inner
+		.alert__title
+		.alert__text

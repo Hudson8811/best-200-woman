@@ -1,0 +1,431 @@
+.modal{
+	width: 1200px;
+	max-width: 100%;
+	background: #09151F;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	display: none;
+	padding: 0;
+	@media (max-width: 1300px){
+		width: vw(1200, 1300);
+	}
+	@media (max-width: 800px){
+		width: 100%;
+	}
+	&__close{
+		background: url("../images/close.svg") center center no-repeat;
+		background-size: 100% 100%;
+		width: 94px;
+		height: 94px;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 99;
+		transition: opacity 0.3s;
+		@media (max-width: 1300px){
+			width: vw(94, 1300);
+			height: vw(94, 1300);
+		}
+		@media (max-width: 800px){
+			width: vw2(94);
+			height: vw2(94);
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	&__top{
+		padding: 110px 110px 49px;
+		@media (max-width: 1300px){
+			padding: vw(110, 1300) vw(110, 1300) vw(49, 1300);
+		}
+		@media (max-width: 800px){
+			padding: vw2(110) vw2(110) vw2(49);
+		}
+	}
+	&__slider{
+		height: 476px;
+		@media (max-width: 1300px){
+			height: vw(476, 1300);
+		}
+		@media (max-width: 800px){
+			height: vw2(476);
+		}
+		&::before{
+			content: "";
+			width: 10px;
+			height: 100%;
+			display: block;
+			background: #f70042;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 5;
+			pointer-events: none;
+			@media (max-width: 1300px){
+				width: vw(10, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(10);
+			}
+		}
+		&::after{
+			content: "";
+			width: 100%;
+			height: 10px;
+			display: block;
+			background: #f70042;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 5;
+			pointer-events: none;
+			@media (max-width: 1300px){
+				height: vw(10, 1300);
+			}
+			@media (max-width: 800px){
+				height: vw2(10);
+			}
+		}
+	}
+	&__slide{
+		display: flex !important;
+		justify-content: center;
+		background: white;
+		&-inner{
+			position: relative;
+			z-index: 2;
+			height: 476px;
+			@media (max-width: 1300px){
+				height: vw(476, 1300);
+			}
+			@media (max-width: 800px){
+				height: vw2(476);
+			}
+			img{
+				display: block;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		&-background{
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				filter: blur(20px);
+				opacity: 0.6;
+			}
+		}
+	}
+	&__btn{
+		background: url("../images/left.svg") center center no-repeat;
+		background-size: 100% 100%;
+		width: 72px;
+		height: 72px;
+		cursor: pointer;
+		position: absolute;
+		top: 46%;
+		z-index: 99;
+		transition: opacity 0.3s;
+		@media (max-width: 1300px){
+			width: vw(72, 1300);
+			height: vw(72, 1300);
+		}
+		@media (max-width: 800px){
+			height: vw2(72);
+			width: vw2(72);
+		}
+		&--prev{
+			left: -90px;
+			@media (max-width: 1300px){
+				left: vw(-90, 1300);
+			}
+			@media (max-width: 800px){
+				left: vw2(-90);
+			}
+		}
+		&--next{
+			right: -90px;
+			transform: scaleX(-1);
+			@media (max-width: 1300px){
+				right: vw(-90, 1300);
+			}
+			@media (max-width: 800px){
+				right: vw2(-90);
+			}
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+
+	&__bottom{
+		display: flex;
+		padding: 0 78px 49px;
+		@media (max-width: 1300px){
+			padding: 0 vw(78, 1300) vw(49, 1300);
+		}
+		@media (max-width: 800px){
+			padding: 0 vw2(78) vw2(49);
+			display: block;
+		}
+	}
+	&__left{
+		width: 334px;
+		flex-shrink: 0;
+		margin-right: 30px;
+		padding-bottom: 38px;
+		position: relative;
+		@media (max-width: 1300px){
+			width: vw(334, 1300);
+			margin-right: vw(30, 1300);
+			padding-bottom: vw(38, 1300);
+		}
+		@media (max-width: 800px){
+			width: 100%;
+			flex-shrink: 0;
+			margin-right: vw2(30);
+			padding-bottom: vw2(38);
+		}
+	}
+	&__right{
+		flex-grow: 1;
+		@media (max-width: 800px){
+			margin-top: vw2(30);
+		}
+	}
+	&__studio{
+		color: #FFF;
+		font-family: Raleway, sans-serif;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: uppercase;
+		@media (max-width: 1300px){
+			font-size: vw(30, 1300);
+		}
+		@media (max-width: 800px){
+			font-size: vw2(30);
+		}
+	}
+	&__name{
+		color: #FFF;
+		font-family: Raleway, sans-serif;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+		@media (max-width: 1300px){
+			font-size: vw(38, 1300);
+		}
+		@media (max-width: 800px){
+			font-size: vw2(38);
+		}
+		&:not(:first-child){
+			margin-top: 9px;
+			@media (max-width: 1300px){
+				margin-top: vw(9, 1300);
+			}
+			@media (max-width: 800px){
+				margin-top: vw2(9);
+			}
+		}
+	}
+	&__text{
+		color: #FFF;
+		font-family: Raleway, sans-serif;
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		margin-top: -2px;
+		@media (max-width: 1300px){
+			font-size: vw(21, 1300);
+		}
+		@media (max-width: 800px){
+			font-size: vw2(28);
+			margin-top: 0;
+		}
+	}
+	&__social{
+		display: flex;
+		align-items: center;
+		padding: 0 78px 60px;
+		@media (max-width: 1300px){
+			padding: vw(78, 1300) vw(60, 1300);
+		}
+		@media (max-width: 800px){
+			padding: 0 vw2(78) vw2(60);
+		}
+		&-title{
+			color: #F2B604;
+			font-family: Miriam Libre, sans-serif;
+			font-size: 21px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			margin-right: 27px;
+			@media (max-width: 1300px){
+				font-size: vw(21, 1300);
+				margin-right: vw(27, 1300);
+			}
+			@media (max-width: 800px){
+				font-size: vw2(35);
+				margin-right: vw2(50);
+			}
+		}
+		&-share{}
+	}
+
+	&__line{
+		display: block;
+		position: absolute;
+		z-index: 25;
+		height: 9px;
+		@media (max-width: 1300px){
+			height: vw(9, 1300);
+		}
+		@media (max-width: 800px){
+			height: vw2(9);
+		}
+		&--1{
+			width: 207px;
+			background: #F70042;
+			top: 56px;
+			left: 50%;
+			transform: translateX(-21%);
+			@media (max-width: 1300px){
+				width: vw(207, 1300);
+				top: vw(56, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(207);
+				top: vw2(56);
+			}
+		}
+		&--2{
+			width: 204px;
+			background: #08151F;
+			top: 124px;
+			right: 20px;
+			@media (max-width: 1300px){
+				width: vw(204, 1300);
+				top: vw(124, 1300);
+				right: vw(20, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(204);
+				top: vw2(124);
+				right: vw2(20);
+			}
+		}
+		&--3{
+			width: 164px;
+			background: #F2B604;
+			top: 440px;
+			right: 0;
+			@media (max-width: 1300px){
+				width: vw(164, 1300);
+				top: vw(440, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(164);
+				top: vw2(440);
+			}
+		}
+		&--4{
+			width: 192px;
+			background: #F2B604;
+			bottom: 8px;
+			left: -78px;
+			@media (max-width: 1300px){
+				width: vw(192, 1300);
+				bottom: vw(8, 1300);
+				left: vw(-78, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(192);
+				bottom: vw2(8);
+				left: vw2(-78);
+			}
+		}
+		&--5{
+			width: 207px;
+			background: #1A56A5;
+			bottom: 65px;
+			right: 78px;
+			@media (max-width: 1300px){
+				width: vw(207, 1300);
+				bottom: vw(65, 1300);
+				right: vw(78, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(207);
+				bottom: vw2(30);
+				right: vw2(78);
+			}
+		}
+	}
+}
+.share{
+	display: flex;
+	&__btn{
+		width: 32px;
+		height: 32px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		transition: opacity 0.3s;
+		@media (max-width: 1300px){
+			width: vw(32, 1300);
+			height: vw(32, 1300);
+		}
+		@media (max-width: 800px){
+			width: vw2(64);
+			height: vw2(64);
+		}
+		&.vk{
+			width: 33px;
+			background-image: url("../images/vk.svg");
+			@media (max-width: 1300px){
+				width: vw(33, 1300);
+			}
+			@media (max-width: 800px){
+				width: vw2(66);
+			}
+		}
+		&.ok{
+			background-image: url("../images/ok.svg");
+		}
+		&.tg{
+			background-image: url("../images/tg.svg");
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+		&:not(:first-child){
+			margin-left: 22px;
+			@media (max-width: 1300px){
+				margin-left: vw(22, 1300);
+			}
+			@media (max-width: 800px){
+				margin-left: vw2(44);
+			}
+		}
+	}
+}
