@@ -57,8 +57,29 @@
 			font-size: 8vw;
 			margin-left: 15vw;
 		}
+		&-label{
+			margin-left: 8px;
+			width: 844px;
+			@media (max-width: 1920px){
+				margin-left: vw(8);
+				width: vw(844);
+			}
+			@media (max-width: 800px){
+				margin-left: vw(4);
+				width: vw2(423);
+			}
+		}
 		span {
 			position: relative;
+			height: 154px;
+			display: inline-flex;
+			align-items: center;
+			@media (max-width: 1920px){
+				height: vw(154);
+			}
+			@media (max-width: 800px){
+				height: vw2(77);
+			}
 			.feedback__square-top-left{
 				position: absolute;
 				top: 50%;
